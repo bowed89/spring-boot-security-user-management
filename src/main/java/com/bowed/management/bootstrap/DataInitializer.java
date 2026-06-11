@@ -1,9 +1,9 @@
-package com.bowed.managment.bootstrap;
+package com.bowed.management.bootstrap;
 
-import com.bowed.managment.dao.RoleDao;
-import com.bowed.managment.dao.UserDao;
-import com.bowed.managment.entity.Role;
-import com.bowed.managment.entity.User;
+import com.bowed.management.dao.RoleDao;
+import com.bowed.management.dao.UserDao;
+import com.bowed.management.entity.Role;
+import com.bowed.management.entity.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

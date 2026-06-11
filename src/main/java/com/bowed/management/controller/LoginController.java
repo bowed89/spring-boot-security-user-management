@@ -1,4 +1,4 @@
-package com.bowed.managment.controller;
+package com.bowed.management.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

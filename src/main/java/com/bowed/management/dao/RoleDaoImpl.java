@@ -1,6 +1,6 @@
-package com.bowed.managment.dao;
+package com.bowed.management.dao;
 
-import com.bowed.managment.entity.Role;
+import com.bowed.management.entity.Role;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;

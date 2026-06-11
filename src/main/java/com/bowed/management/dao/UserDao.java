@@ -1,6 +1,6 @@
-package com.bowed.managment.dao;
+package com.bowed.management.dao;
 
-import com.bowed.managment.entity.User;
+import com.bowed.management.entity.User;
 
 public interface UserDao {
     User findByUserName(String userName);

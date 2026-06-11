@@ -1,6 +1,6 @@
-package com.bowed.managment.security;
+package com.bowed.management.security;
 
-import com.bowed.managment.service.UserService;
+import com.bowed.management.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;

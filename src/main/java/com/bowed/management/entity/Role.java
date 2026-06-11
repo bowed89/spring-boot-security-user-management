@@ -1,4 +1,4 @@
-package com.bowed.managment.entity;
+package com.bowed.management.entity;
 
 import jakarta.persistence.*;
 

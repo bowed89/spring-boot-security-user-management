@@ -1,6 +1,6 @@
-package com.bowed.managment.service;
+package com.bowed.management.service;
 
-import com.bowed.managment.entity.User;
+import com.bowed.management.entity.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {
