@@ -1,13 +1,13 @@
-package com.spring_mvc_security.demosecurity;
+package com.spring_mvc_security.managment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemosecurityApplication {
+public class ManagmentsecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemosecurityApplication.class, args);
+		SpringApplication.run(ManagmentsecurityApplication.class, args);
 	}
 
 }
