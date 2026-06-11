@@ -1,30 +1,28 @@
-package com.spring_mvc_security.managment.security;
+package com.bowed.managment.security;
 
+import com.bowed.managment.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import javax.sql.DataSource;
-
 @Configuration
-public class DemoSecurityConfig {
-    //    Add support for JDBC
+public class ManagementSecurityConfig {
+    //bcrypt bean definition
     @Bean
-    public UserDetailsManager userDetailsManager(DataSource dataSource) {
-        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
-
-        // Define query to retrieve a user by username
-        jdbcUserDetailsManager.setUsersByUsernameQuery(
-                "select user_id, pw, active from members where user_id=?");
-        // Define query to retrieve the authorities/roles by username
-        jdbcUserDetailsManager.setAuthoritiesByUsernameQuery(
-                "select user_id, role from roles where user_id=?");
-
-        return jdbcUserDetailsManager;
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider(UserService userService) {
+        DaoAuthenticationProvider auth = new DaoAuthenticationProvider(userService);
+        auth.setPasswordEncoder(passwordEncoder());
+        return auth;
+    }
+
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

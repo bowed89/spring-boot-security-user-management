@@ -1,4 +1,4 @@
-package com.spring_mvc_security.managment.controller;
+package com.bowed.managment.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,6 +9,7 @@ public class LoginController {
     public String showMyLoginPage() {
         return "fancy-login";
     }
+
     // Add request mapping for /access-denied
     @GetMapping("/access-denied")
     public String showAccessDenied() {

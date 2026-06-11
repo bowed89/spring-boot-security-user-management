@@ -1,10 +1,10 @@
-package com.spring_mvc_security.managment;
+package com.bowed.managment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ManagmentsecurityApplicationTests {
+class ManagementSecurityApplicationTests {
 
 	@Test
 	void contextLoads() {

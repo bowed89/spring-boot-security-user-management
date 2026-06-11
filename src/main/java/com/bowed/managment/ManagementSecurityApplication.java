@@ -1,13 +1,13 @@
-package com.spring_mvc_security.managment;
+package com.bowed.managment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ManagmentsecurityApplication {
+public class ManagementSecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ManagmentsecurityApplication.class, args);
+		SpringApplication.run(ManagementSecurityApplication.class, args);
 	}
 
 }

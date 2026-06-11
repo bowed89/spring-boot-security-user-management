@@ -1,4 +1,4 @@
-package com.spring_mvc_security.managment.entity;
+package com.bowed.managment.entity;
 
 import jakarta.persistence.*;
 
@@ -6,7 +6,7 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class  User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -20,10 +20,7 @@ public class User {
 
     @Column(name = "enabled")
     private boolean enabled;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))

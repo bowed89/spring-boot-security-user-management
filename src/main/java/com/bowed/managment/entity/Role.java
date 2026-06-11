@@ -1,4 +1,4 @@
-package com.spring_mvc_security.managment.entity;
+package com.bowed.managment.entity;
 
 import jakarta.persistence.*;
 

@@ -1,10 +1,10 @@
-package com.spring_mvc_security.managment.controller;
+package com.bowed.managment.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class DemoController {
+public class HomeController {
     @GetMapping("/")
     public String showHome() {
 
